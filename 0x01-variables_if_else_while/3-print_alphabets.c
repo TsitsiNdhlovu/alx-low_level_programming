@@ -9,11 +9,9 @@ int main(void)
 	char alph;
 
 	for (alp = 'a'; alp <= 'z'; alp++)
-	{
 		putchar(alp);
-		alph = toupper(alp);
+	for (alph ='A'; alph <= 'Z' alph++)
 		putchar(alph);
-	}
 	putchar('\n');
 	return (0);
 }
