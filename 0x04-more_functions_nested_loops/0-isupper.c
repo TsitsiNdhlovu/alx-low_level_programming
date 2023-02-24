@@ -2,7 +2,7 @@
 
 /**
  * _isupper- print uppercase character
- * @n: number to be checked
+ * @c: number to be checked
  * Return: 1 or 0
 */
 
