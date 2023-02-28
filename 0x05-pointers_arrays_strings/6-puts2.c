@@ -1,20 +1,22 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * puts2 - prints part of a string
- * @str: string to be printed
+ * puts2 - prints every other character of string, starting with first letter
  *
- * Return: void
- **/
+ * @str: string to be checked
+ */
+
 void puts2(char *str)
 {
-	int index = 0, len = 0;
+	int i;
 
-	while (str[index++])
-		len++;
-
-	for (index = 0; index < len; index += 2)
-		_putchar(str[index]);
-
+	for (i = 0; i < _strlen(str); i++)
+	{
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
+	}
 	_putchar('\n');
 }
