@@ -1,53 +1,21 @@
-include "main.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
- * print_number - function that prints an integer
- * code by ArchibaldTK
- * @n: the int value for the parameters of the function
- * Return: 0
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-
-
-void print_number(int n)
+int main(void)
 {
-	int power;
-	int neg;
-	int hold;
-
-	neg = 0;
-	power = 1;
-	hold = n;
-	if (n < 0)
-	{
-		_putchar('-');
-		neg = 1;
-	}
-
-	while (hold > 9 || hold < -9)
-	{
-		power *= 10;
-		hold /= 10;
-	}
-
-	while (power > 0)
-	{
-		if (power > 9)
-		{
-			if (!neg)
-				_putchar((n / power % 10) + '0');
-			else
-				_putchar((n / power % 10) * -1 + '0');
-
-			power /= 10;
-		}
-		if (power == 1)
-		{
-			if (neg)
-				_putchar((n % 10) * -1 + '0');
-			else
-				_putchar(n % 10 + '0');
-			power = 0;
-		}
-	}
+    print_number(98);
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
+    return (0);
 }
