@@ -1,13 +1,16 @@
-#include <stdio.h>
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-/**
- * premain - function that runs before main
- *
- * Return: nothing
- */
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-void __attribute__ ((constructor)) premain()
-{
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
-}
+	mov eax, 0
+	ret
+
