@@ -1,4 +1,8 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
 #include "main.h"
+
 /**
  * create_file - creates a file
  * @filename: filename to grab
